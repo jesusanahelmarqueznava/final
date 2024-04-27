@@ -12,7 +12,7 @@ def main():
     choice = st.sidebar.selectbox("Selecciona una opción", options)
 
     if choice == "Opción 1":
-        st.write("Has seleccionado la opción 1")
+        st.subheader("Has seleccionado la opción 1")
         show_code("Patrones.ipynb")
     elif choice == "Opción 2":
         st.write("Has seleccionado la opción 2")
