@@ -1,16 +1,9 @@
 import streamlit as st
 
-def option_one():
-    st.write("Has seleccionado la opción 1")
-    # Aquí puedes agregar el código que quieras ejecutar para la opción 1
-
-def option_two():
-    st.write("Has seleccionado la opción 2")
-    # Aquí puedes agregar el código que quieras ejecutar para la opción 2
-
-def option_three():
-    st.write("Has seleccionado la opción 3")
-    # Aquí puedes agregar el código que quieras ejecutar para la opción 3
+def show_code(file_path):
+    with open(file_path, "r") as file:
+        code = file.read()
+    st.code(code, language="python")
 
 def main():
     st.title("Menú con Streamlit")
@@ -19,12 +12,16 @@ def main():
     choice = st.sidebar.selectbox("Selecciona una opción", options)
 
     if choice == "Opción 1":
-        option_one()
+        st.write("Has seleccionado la opción 1")
+        show_code("Patrones.ipynb")
     elif choice == "Opción 2":
-        option_two()
+        st.write("Has seleccionado la opción 2")
+        show_code("Anomalias.ipynb")
     elif choice == "Opción 3":
-        option_three()
+        st.write("Has seleccionado la opción 3")
+        show_code("Analisis_Estacionariedad.ipynb")
 
 if __name__ == "__main__":
     main()
+
 
