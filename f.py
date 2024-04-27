@@ -56,11 +56,11 @@ def main():
 
     # Botones de opciones
     st.markdown("<div class='menu-options'>", unsafe_allow_html=True)
-    if st.button("Opción 1", class_='option-button'):
+    if st.button("Opción 1", key="opcion_1"):
         option_one()
-    if st.button("Opción 2", class_='option-button'):
+    if st.button("Opción 2", key="opcion_2"):
         option_two()
-    if st.button("Opción 3", class_='option-button'):
+    if st.button("Opción 3", key="opcion_3"):
         option_three()
     st.markdown("</div>", unsafe_allow_html=True)
 
